@@ -1,0 +1,77 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: left;
+	
+}
+
+#left-div,
+#right-div {
+	display: block;
+	margin: 0 auto;
+
+}
+
+#left-div {
+	width: 700px;
+}
+
+
+td, th {
+	height: 30px;
+	padding: 9px;
+}
+
+.star {
+	width: 20px;
+}
+
+.edit {
+	width: 50px;
+}
+
+th {
+	background-color: #cbcbcb;
+	width: 80px;
+}
+
+td {
+	width: 80px;
+}
+
+header {
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+
+}
+
+.form-container {
+	margin: 0 auto;
+	width: 60%;
+}
+
+
+a {
+	color: #777;
+	padding: 5px;
+	line-height: 2em;
+	font-size: 1.5em;
+}
+
+li {
+	list-style: none;
+}
+
+figure {
+	width: 305px;
+	margin: 0 auto;
+	border: 10px solid rgba(35, 35, 35, 0.5);
+}
+

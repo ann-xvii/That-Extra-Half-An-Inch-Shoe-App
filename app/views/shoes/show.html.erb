@@ -1,0 +1,16 @@
+<div class="form-container">
+<h1><%= @shoe.name %></h1>
+<p>These are the <%= @shoe.brand %> <%= @shoe.name %>.</p>
+<p> They are brand new this season, and run at $<%= @shoe.price %>0</p>
+
+<%= @shoe.user.inspect %>
+
+<br>
+
+<br>
+<br>
+</div>
+<nav>
+  <%= link_to "Edit #{@shoe.name}'s Information", edit_shoe_path(@shoe) %>
+  <%= link_to "Delete #{@shoe.name}", shoe_path(@shoe), method: :delete, data: {confirm: "Are you sure you want to delete #{@shoe.name}? #{@shoe.name} is really nice."} %>
+</nav>

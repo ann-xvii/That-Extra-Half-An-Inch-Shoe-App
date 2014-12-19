@@ -1,0 +1,8 @@
+<h1>All Our Shoes</h1>
+<ul>
+  <% @shoes.each do |shoe| %>
+    <li>
+      <%= link_to shoe.name, shoe %> (<%= link_to "Edit", edit_shoe_path(shoe) %>)
+    </li>
+  <% end %>
+</ul>

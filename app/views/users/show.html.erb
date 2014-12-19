@@ -1,0 +1,55 @@
+<div id="center-container">
+
+<header>
+	<h1><%= @user.name %></h1>
+	<p>This is <%= @user.name %>'s profile page.</p>
+</header>
+
+
+
+	<div id="left-div">
+	<table class="pure-table pure-table-horizontal">
+	    <thead>
+	        <tr>
+	            <th class="star"></th>
+	            <th>Name</th>
+	            <th>Brand</th>
+	            <th>Season</th>
+	            <th>Origin</th>
+	            <th>Heel</th>
+	            <th>Price</th>
+	            <th class="edit"></th>
+	        </tr>
+	    </thead>
+
+	    <tbody>
+	    <% @user.shoes.each do |shoe| %>
+	        <tr>
+	        
+	            <td class="star">&#9734;</td>
+	            <td><%= shoe.name %></td>
+	            <td><%= shoe.brand %></td>
+	            <td><%= shoe.season %></td>
+	            <td><%= shoe.origin %></td>
+	            <td><%= shoe.heel %></td>
+	            <td>$<%= shoe.price %>0</td>
+	            <td class="edit"><%= link_to "Edit", edit_shoe_path(shoe) %></td>
+	        </tr>
+	      <% end %>
+	    </tbody>
+	</table>
+	</div>
+<br>
+<br>
+	<div id="right-div">
+			<figure><%= link_to image_tag("jimmy-choo.jpeg") %></figure>
+	</div>
+</div>
+
+
+
+<nav>
+  <%= link_to "Edit #{@user.name}'s Information", edit_user_path(@user) %>
+  <%= link_to "Delete #{@user.name}", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to delete #{@user.name}? #{@user.name} is really nice."} %>
+</nav>
+

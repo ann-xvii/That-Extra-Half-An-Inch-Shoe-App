@@ -1,0 +1,12 @@
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    
+    <%= f.label :shoes %>
+	<%= f.collection_select :shoes, Shoe.all, :id, :name %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

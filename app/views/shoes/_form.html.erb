@@ -1,0 +1,27 @@
+<%= form_for @shoe do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>	
+
+    <%= f.label :brand %>
+    <%= f.text_field :brand %>
+
+     <%= f.label :season %>
+    <%= f.text_field :season %>
+
+     <%= f.label :origin %>
+    <%= f.text_field :origin %>
+
+     <%= f.label :heel %>
+    <%= f.text_field :heel %>
+
+     <%= f.label :price %>
+    <%= f.text_field :price %>
+
+    <%= f.label :user %>
+    <%= f.collection_select :user, User.all, :id, :name %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

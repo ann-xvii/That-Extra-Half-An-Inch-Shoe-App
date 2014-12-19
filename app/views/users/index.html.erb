@@ -1,0 +1,11 @@
+<div class="form-container">
+<h1>That Extra Half Inch: A Shoe Blog</h1>
+<h2>In-The-Know Members</h2>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user.name, user %> (<%= link_to "Edit", edit_user_path(user) %>)
+    </li>
+  <% end %>
+</ul>
+</div>
